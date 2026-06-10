@@ -44,9 +44,10 @@ Evaluation
 - Final evaluation on held-out test set (2,200 samples)
 
 ### Key Results (Summary)
-** Best selected model: Artificial Neural Network (ANN) 
-** Overall accuracy: 67.41% on 2,200 test samples 
-** ANN outperformed all three traditional ML models on F1-macro CV (0.7044 vs. SVM 0.6468, KNN 0.6342, LR 0.6222), with better regularization via Dropout and EarlyStopping. 
+* **Best selected model:** Artificial Neural Network (ANN).
+* **Test performance:** Achieved an overall accuracy of 67.41% on the test set.
+* The model demonstrated high cost-efficiency with a Precision of 85.06% for the 'Delayed Delivery' class, meaning out of 100 alerts generated, 85 are accurate.
+* The Recall for delayed orders was 55.06%, successfully preventing 32.9% of total test order delays.
 
 ### Business Insights & Recommendations
 1. Deploy a real-time alert system, integrate the ANN model into the OMS so every new order receives an automatic delay-risk score; high-risk orders are escalated in the processing queue immediately 
@@ -56,24 +57,17 @@ Evaluation
 5. Quarterly model retraining, retrain periodically as delivery network and customer behavior evolve; expand features with geographic and seasonal data to close coverage gaps 
 
 ### Repository Structure
-E-Commerce-Shipping-Dataset.csv         — dataset 
-Group_X_MIS451_Notebook.ipynb           — EDA + preprocessing + modeling 
-Group_X_MIS451_Report.pdf               — full report (Vietnamese) 
-Group_X_MIS451_Presentation.pptx        — 5-slide summary deck 
-README.md                               — project overview 
+* `Project_451_Group.ipynb` — Jupyter Notebook (EDA, preprocessing, modeling)
+* `Group_MIS 451_Report.docx` — Full project report
+* `MIS451_GroupLazy.pdf` — Presentation slides
+* `README.md` — Project overview
 
 ### How to Run
-1. Open Group_X_MIS451_Notebook.ipynb
-2. Install requirements:
-
-   pandas, numpy, matplotlib, seaborn 
-   scikit-learn 
-   tensorflow / keras  (for ANN) 
-
-3. Run all cells — the pipeline handles splitting, encoding, scaling, training, and evaluation end-to-end
-
+1. Open `Project_451_Group.ipynb`.
+2. Install requirements (typical): `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`.
+3. Ensure TensorFlow/Keras is installed for the ANN model.
+4. Run all cells sequentially. The pipeline handles data splitting, one-hot encoding, standard scaling, and model evaluation automatically.
 ### Team
-Lê Anh Khương - Model Development and Evaluation 
-Phạm Thúy Huyền - Data Processing and Transformation 
-Võ Thị Hoài Anh - Data Overview and Preprocessing 
-
+* **Lê Anh Khương:** Model Development and Evaluation.
+* **Phạm Thúy Huyền:** Data Processing and Transformation.
+* **Võ Thị Hoài Anh:** Data Overview and Preprocessing.
