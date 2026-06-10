@@ -44,9 +44,9 @@ Evaluation
 - Final evaluation on held-out test set (2,200 samples)
 
 ### Key Results (Summary)
-Best selected model: Artificial Neural Network (ANN) 
-Overall accuracy: 67.41% on 2,200 test samples 
-ANN outperformed all three traditional ML models on F1-macro CV (0.7044 vs. SVM 0.6468, KNN 0.6342, LR 0.6222), with better regularization via Dropout and EarlyStopping. 
+** Best selected model: Artificial Neural Network (ANN) 
+** Overall accuracy: 67.41% on 2,200 test samples 
+** ANN outperformed all three traditional ML models on F1-macro CV (0.7044 vs. SVM 0.6468, KNN 0.6342, LR 0.6222), with better regularization via Dropout and EarlyStopping. 
 
 ### Business Insights & Recommendations
 1. Deploy a real-time alert system, integrate the ANN model into the OMS so every new order receives an automatic delay-risk score; high-risk orders are escalated in the processing queue immediately 
