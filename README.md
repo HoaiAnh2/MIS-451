@@ -44,36 +44,36 @@ Evaluation
 - Final evaluation on held-out test set (2,200 samples)
 
 ### Key Results (Summary)
-Best selected model: Artificial Neural Network (ANN)
-Overall accuracy: 67.41% on 2,200 test samples
-ANN outperformed all three traditional ML models on F1-macro CV (0.7044 vs. SVM 0.6468, KNN 0.6342, LR 0.6222), with better regularization via Dropout and EarlyStopping.
+Best selected model: Artificial Neural Network (ANN) 
+Overall accuracy: 67.41% on 2,200 test samples 
+ANN outperformed all three traditional ML models on F1-macro CV (0.7044 vs. SVM 0.6468, KNN 0.6342, LR 0.6222), with better regularization via Dropout and EarlyStopping. 
 
 ### Business Insights & Recommendations
-Deploy a real-time alert system, integrate the ANN model into the OMS so every new order receives an automatic delay-risk score; high-risk orders are escalated in the processing queue immediately
-Align promotional campaigns with logistics capacity, Discount_offered is the strongest predictor of late delivery; Marketing and Logistics must coordinate before flash sales to pre-scale warehouse and transport capacity
-Use call volume as an early warning signal, high Customer_care_calls correlates with delay risk; equip the support team with order-risk dashboards to triage proactively
-Threshold tuning, lower the classification threshold from 0.5 to 0.35–0.40 to improve Recall (currently 55.1%) at the cost of more false alarms, calibrated to the FP/FN cost trade-off
-Quarterly model retraining, retrain periodically as delivery network and customer behavior evolve; expand features with geographic and seasonal data to close coverage gaps
+1. Deploy a real-time alert system, integrate the ANN model into the OMS so every new order receives an automatic delay-risk score; high-risk orders are escalated in the processing queue immediately 
+2. Align promotional campaigns with logistics capacity, Discount_offered is the strongest predictor of late delivery; Marketing and Logistics must coordinate before flash sales to pre-scale warehouse and transport capacity 
+3. Use call volume as an early warning signal, high Customer_care_calls correlates with delay risk; equip the support team with order-risk dashboards to triage proactively 
+4. Threshold tuning, lower the classification threshold from 0.5 to 0.35–0.40 to improve Recall (currently 55.1%) at the cost of more false alarms, calibrated to the FP/FN cost trade-off 
+5. Quarterly model retraining, retrain periodically as delivery network and customer behavior evolve; expand features with geographic and seasonal data to close coverage gaps 
 
 ### Repository Structure
-E-Commerce-Shipping-Dataset.csv         — dataset
-Group_X_MIS451_Notebook.ipynb           — EDA + preprocessing + modeling
-Group_X_MIS451_Report.pdf               — full report (Vietnamese)
-Group_X_MIS451_Presentation.pptx        — 5-slide summary deck
-README.md                               — project overview
+E-Commerce-Shipping-Dataset.csv         — dataset 
+Group_X_MIS451_Notebook.ipynb           — EDA + preprocessing + modeling 
+Group_X_MIS451_Report.pdf               — full report (Vietnamese) 
+Group_X_MIS451_Presentation.pptx        — 5-slide summary deck 
+README.md                               — project overview 
 
 ### How to Run
 1. Open Group_X_MIS451_Notebook.ipynb
 2. Install requirements:
 
-   pandas, numpy, matplotlib, seaborn
-   scikit-learn
-   tensorflow / keras  (for ANN)
+   pandas, numpy, matplotlib, seaborn 
+   scikit-learn 
+   tensorflow / keras  (for ANN) 
 
 3. Run all cells — the pipeline handles splitting, encoding, scaling, training, and evaluation end-to-end
 
 ### Team
-Lê Anh Khương - Model Development and Evaluation
-Phạm Thúy Huyền - Data Processing and Transformation
-Võ Thị Hoài Anh - Data Overview and Preprocessing
+Lê Anh Khương - Model Development and Evaluation 
+Phạm Thúy Huyền - Data Processing and Transformation 
+Võ Thị Hoài Anh - Data Overview and Preprocessing 
 
